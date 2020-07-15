@@ -11,7 +11,7 @@ using System.CodeDom;
 
 namespace EShop.DataAccess.InMemory
 {
-    class ProductRepository
+    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products;
@@ -23,6 +23,11 @@ namespace EShop.DataAccess.InMemory
             {
                 products = new List<Product>();
             }
+        }
+
+        public void Insert(Product p)
+        {
+            products.Add(p);
         }
 
         public void Commit()

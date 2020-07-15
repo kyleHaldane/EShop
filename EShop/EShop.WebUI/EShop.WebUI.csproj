@@ -170,6 +170,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductCategoryManagerController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,9 +237,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ProductCategoryManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +258,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EShop.Core\EShop.Core.csproj">
+      <Project>{cddf72d3-2c7a-47bb-a3eb-cf45c328061a}</Project>
+      <Name>EShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EShop.DataAccess.InMemory\EShop.DataAccess.InMemory.csproj">
+      <Project>{db07dc66-27f0-459a-957c-86a27bdb8444}</Project>
+      <Name>EShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EShop.DataAccess.SQL\EShop.DataAccess.SQL.csproj">
+      <Project>{aa0b257e-ddbc-4db9-9c2e-3688e6b0c40c}</Project>
+      <Name>EShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EShop.Services\EShop.Services.csproj">
+      <Project>{fd7a3ac6-7eac-43a9-8817-0e7b12107a0c}</Project>
+      <Name>EShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
