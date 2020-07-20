@@ -70,7 +70,7 @@ namespace EShop.Services
             return basket;
         }
 
-        public void AdddToBasket(HttpContextBase httpContext, string productId)
+        public void AddToBasket(HttpContextBase httpContext, string productId)
         {
             Basket basket = GetBasket(httpContext, true);
             BasketItem item = basket.Basketitems.FirstOrDefault(i => i.ProductId == productId);
@@ -106,7 +106,7 @@ namespace EShop.Services
             }
         }
 
-        public List<BasketItemViewModel> GetBaketItem(HttpContextBase httpContext)
+        public List<BasketItemViewModel> GetBaketItems(HttpContextBase httpContext)
         {
             Basket basket = GetBasket(httpContext, false);
 
