@@ -106,7 +106,7 @@ namespace EShop.Services
             }
         }
 
-        public List<BasketItemViewModel> GetBaketItems(HttpContextBase httpContext)
+        public List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext)
         {
             Basket basket = GetBasket(httpContext, false);
 
@@ -155,6 +155,13 @@ namespace EShop.Services
             {
                 return model;
             }
+        }
+
+        public void ClearBasket(HttpContextBase httpContext)
+        {
+            Basket basket = GetBasket(httpContext, false);
+            basket.Basketitems.Clear();
+            basketContext.Commit();
         }
     }
 }
