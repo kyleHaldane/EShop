@@ -2,9 +2,6 @@
 @{
     ViewBag.Title = "BasketSummary";
 }
-
-<h2>BasketSummary</h2>
-
 <ul class="nav navbar-nav navbar-right">
     <li><a href="@Url.Action("Index", "Basket")">@Model.BasketCount items </a></li>
     <li><a href="@Url.Action("Index", "Basket")">@String.Format("{0:c}", Model.BasketTotal)</a></li>
